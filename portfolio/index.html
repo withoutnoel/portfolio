@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | ณัชพล แก้วตีนแท่น</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+  <div class="toast" id="toast"><i class="ph-fill ph-check-circle"></i> คัดลอก Email แล้ว!</div>
+  <div class="spotlight" id="spotlight"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo"><span class="logo-bracket">&lt;</span>NAT<span class="logo-bracket">/&gt;</span></div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" class="nav-link">เกี่ยวกับฉัน</a></li>
+      <li><a href="#skills" class="nav-link">ทักษะ</a></li>
+      <li><a href="#education" class="nav-link">การศึกษา</a></li>
+      <li><a href="#projects" class="nav-link">ผลงาน</a></li>
+      <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="ph-fill ph-sun" id="theme-icon"></i>
+      </button>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        สมัครเข้าศึกษา มทร.อีสาน วิทยาเขตขอนแก่น
+      </div>
+      <h1 class="hero-title" data-text="สวัสดีครับ ผม">สวัสดีครับ ผม<br/><span class="typewriter" id="typewriter"></span></h1>
+      <p class="hero-sub">นักพัฒนารุ่นใหม่ | เทคโนโลยีธุรกิจดิจิทัล</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">ดูผลงาน</a>
+        <a href="#contact" class="btn btn-outline">ติดต่อฉัน</a>
+      </div>
+      <div class="hero-scroll"><div class="scroll-line"></div><span>เลื่อนลง</span></div>
+    </div>
+    <div class="hero-visual">
+      <div class="code-card">
+        <div class="code-header">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="code-title">profile.js</span>
+        </div>
+        <pre class="code-body"><span class="c-purple">const</span> <span class="c-blue">me</span> = {
+  <span class="c-green">name</span>: <span class="c-yellow">"ณัชพล แก้วตีนแท่น"</span>,
+  <span class="c-green">nickname</span>: <span class="c-yellow">"นัท"</span>,
+  <span class="c-green">role</span>: <span class="c-yellow">"Digital Business Dev"</span>,
+  <span class="c-green">university</span>: <span class="c-yellow">"RMUTI KKC"</span>,
+  <span class="c-green">gpax</span>: <span class="c-yellow">3.86</span>,
+  <span class="c-green">skills</span>: [<span class="c-yellow">"JS"</span>, <span class="c-yellow">"Vue"</span>, <span class="c-yellow">"PHP"</span>, <span class="c-yellow">"MySQL"</span>],
+  <span class="c-green">available</span>: <span class="c-purple">true</span>
+};</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">01. เกี่ยวกับฉัน</span>
+        <h2>Who Am I?</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-wrap" data-aos="fade-right">
+          <div class="about-img-box">
+            <div class="about-avatar">
+              <img src="me.jpg" alt="ณัชพล แก้วตีนแท่น" style="width:100%;height:100%;object-fit:cover;border-radius:20px;" />
+            </div>
+            <div class="about-img-deco"></div>
+            <!-- Floating badges -->
+            <div class="float-badge float-badge-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" width="16" height="16" /> Vue.js</div>
+            <div class="float-badge float-badge-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="16" height="16" /> React</div>
+            <div class="float-badge float-badge-3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="16" height="16" /> JS</div>
+          </div>
+          <div class="about-stats">
+            <div class="stat stat-purple">
+              <i class="ph-fill ph-star stat-icon"></i>
+              <span class="stat-num" data-count="3.86" data-decimals="2">3.86</span>
+              <span>GPAX</span>
+            </div>
+            <div class="stat stat-cyan">
+              <i class="ph-fill ph-graduation-cap stat-icon"></i>
+              <span class="stat-num">ปวส.</span>
+              <span>ระดับการศึกษา</span>
+            </div>
+            <div class="stat stat-green">
+              <i class="ph-fill ph-calendar stat-icon"></i>
+              <span class="stat-num" data-count="20" data-decimals="0">20</span>
+              <span>ปี</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text" data-aos="fade-left">
+          <p>ผมชื่อ <strong>นายณัชพล แก้วตีนแท่น (นัท)</strong> อายุ 20 ปี เกิดวันที่ 6 ตุลาคม 2548 สำเร็จการศึกษาระดับ <strong>ปวส. สาขานักพัฒนาซอฟต์แวร์</strong> จากวิทยาลัยเทคนิคขอนแก่น ด้วย GPAX <strong>3.86</strong></p>
+          <p>แรงบันดาลใจมาจากความชื่นชอบในการเล่นเกมและซอฟต์แวร์ต่างๆ ทำให้อยากรู้ว่าเทคโนโลยีเหล่านี้ถูกสร้างขึ้นมาได้อย่างไร จึงเริ่มฝึกเขียนโปรแกรมด้วยตนเอง ตั้งแต่ HTML, CSS, JavaScript ไปจนถึง Vue.js, Node.js และ PHP</p>
+          <p>มุ่งมั่นสู่การเป็นนักพัฒนาที่สามารถนำเทคโนโลยีไปต่อยอดในเชิงธุรกิจ โดยเฉพาะการสร้างเว็บไซต์ E-Commerce และธุรกิจออนไลน์</p>
+          <div class="about-tags">
+            <span><i class="ph-fill ph-graduation-cap"></i> ปวส. วิทยาลัยเทคนิคขอนแก่น</span>
+            <span><i class="ph-fill ph-star"></i> GPAX 3.86</span>
+            <span><i class="ph-fill ph-map-pin"></i> ขอนแก่น</span>
+            <span><i class="ph-fill ph-storefront"></i> E-Commerce</span>
+            <span><i class="ph-fill ph-rocket-launch"></i> Self Learner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">02. ทักษะ</span>
+        <h2>Tech Stack</h2>
+      </div>
+      <div class="tech-grid" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- HTML5 -->
+        <div class="tech-card">
+          <div class="tech-logo">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+          </div>
+          <span>HTML5</span>
+          <div class="tech-bar"><div class="tech-fill" style="--w:90%"></div></div>
+        </div>
+
+        <!-- CSS3 -->
+        <div class="tech-card">
+          <div class="tech-logo">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+          </div>
+          <span>CSS3</span>
+          <div class="tech-bar"><div class="tech-fill" style="--w:85%"></div></div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="tech-card">
+          <div class="tech-logo">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+          </div>
+          <span>JavaScript</span>
+          <div class="tech-bar"><div class="tech-fill" style="--w:80%"></div></div>
+        </div>
+
+        <!-- Vue.js -->
+        <div class="tech-card">
+          <div class="tech-logo">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" />
+          </div>
+          <span>Vue.js</span>
+          <div class="tech-bar"><div class="tech-fill" style="--w:65%"></div></div>
+        </div>
+
+        <!-- React -->
+        <div class="tech-card">
+          <div class="tech-logo">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
+          </div>
+          <span>React</span>
+          <div class="tech-bar"><div class="tech-fill" style="--w:55%"></div></div>
+        </div>
+
+        <!-- Node.js -->
+        <div class="tech-card">
+          <div class="tech-logo">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+          </div>
+          <span>Node.js</span>
+          <div class="tech-bar"><div class="tech-fill" style="--w:55%"></div></div>
+        </div>
+
+        <!-- PHP -->
+        <div class="tech-card">
+          <div class="tech-logo">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+          </div>
+          <span>PHP</span>
+          <div class="tech-bar"><div class="tech-fill" style="--w:55%"></div></div>
+        </div>
+
+        <!-- MySQL -->
+        <div class="tech-card">
+          <div class="tech-logo">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+          </div>
+          <span>MySQL</span>
+          <div class="tech-bar"><div class="tech-fill" style="--w:70%"></div></div>
+        </div>
+
+        <!-- Git -->
+        <div class="tech-card">
+          <div class="tech-logo">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+          </div>
+          <span>Git</span>
+          <div class="tech-bar"><div class="tech-fill" style="--w:65%"></div></div>
+        </div>
+
+        <!-- Canva -->
+        <div class="tech-card">
+          <div class="tech-logo">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" />
+          </div>
+          <span>Canva</span>
+          <div class="tech-bar"><div class="tech-fill" style="--w:75%"></div></div>
+        </div>
+
+        <!-- Vercel -->
+        <div class="tech-card">
+          <div class="tech-logo vercel-logo">
+            <svg viewBox="0 0 512 512" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M256 48L496 464H16L256 48z"/></svg>
+          </div>
+          <span>Vercel</span>
+          <div class="tech-bar"><div class="tech-fill" style="--w:60%"></div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">03. การศึกษา</span>
+        <h2>Education</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2561 &ndash; 2563</span>
+            <h3>มัธยมศึกษาตอนต้น</h3>
+            <p>โรงเรียนบ้านดอนแดงดอนน้อยวิทยา</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2564 &ndash; 2566</span>
+            <h3>ประกาศนียบัตรวิชาชีพ</h3>
+            <p>แผนกเทคโนโลยีสารสนเทศ &mdash; วิทยาลัยเทคนิคขอนแก่น</p>
+          </div>
+        </div>
+        <div class="timeline-item active" data-aos="fade-up" data-aos-delay="300">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2567 &ndash; 2568</span>
+            <h3>ประกาศนียบัตรวิชาชีพชั้นสูง</h3>
+            <p>สาขานักพัฒนาซอฟต์แวร์ แผนกเทคโนโลยีสารสนเทศ &mdash; วิทยาลัยเทคนิคขอนแก่น</p>
+          </div>
+        </div>
+        <div class="timeline-item future" data-aos="fade-up" data-aos-delay="400">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2569 &ndash; อนาคต</span>
+            <h3>ปริญญาตรี เทคโนโลยีธุรกิจดิจิทัล</h3>
+            <p>คณะบริหารธุรกิจและเทคโนโลยีสารสนเทศ &mdash; มทร.อีสาน วิทยาเขตขอนแก่น</p>
+            <span class="badge-future"><i class="ph-fill ph-target"></i> เป้าหมาย</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">04. ผลงาน</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- IQ Room -->
+        <!-- NoelSeeker -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-number">01</div>
+          <div class="project-thumb">
+            <img src="noelseeker.png" alt="NoelSeeker Gang Portal Screenshot" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+          </div>
+          <div class="project-badge live-badge"><i class="ph-fill ph-globe"></i> Live</div>
+          <h3>NoelSeeker Gang Portal</h3>
+          <p>เว็บไซต์รวบรวมและจัดการรายชื่อสมาชิกกลุ่มออนไลน์ มีระบบค้นหาสมาชิก, Profile Card พร้อม Role (Founder / Leader / Member) และ Landing Page สไตล์ cinematic</p>
+          <div class="project-tags">
+            <span class="tag-react">React</span>
+            <span class="tag-vercel">Vercel</span>
+            <span>UI/UX</span>
+            <span>Member System</span>
+          </div>
+          <div class="project-links">
+            <a href="https://my-react-app-sigma-one.vercel.app/" target="_blank" class="project-link project-link-live">Live Demo →</a>
+          </div>
+        </div>
+
+        <!-- IQ Room -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-number">02</div>
+          <div class="project-thumb">
+            <img src="iq-room.png" alt="IQ Room Screenshot" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+          </div>
+          <div class="project-badge"><i class="ph-fill ph-game-controller"></i> Game</div>
+          <h3>IQ Room</h3>
+          <p>เกมแนวห้องปริศนา (Escape Room) บน Roblox เพื่อฝึกทักษะด้านความคิดและการแก้ปัญหา ช่วยให้น้องๆ เข้าถึงความรู้ผ่านการเล่นเกม มีระบบ Leaderboard แสดงคะแนน IQ</p>
+          <div class="project-tags">
+            <span class="tag-roblox">Roblox Studio</span>
+            <span>Lua</span>
+            <span>Game Design</span>
+            <span>Education</span>
+          </div>
+          <div class="project-links"><a href="#" class="project-link">View →</a></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">05. ติดต่อ</span>
+        <h2>Let's Connect</h2>
+      </div>
+      <div class="contact-wrap" data-aos="fade-up">
+        <p class="contact-desc">พร้อมเรียนรู้และพัฒนาตนเองอยู่เสมอ มุ่งมั่นสู่การเป็นนักพัฒนาและผู้ประกอบการดิจิทัล ติดต่อได้เลยครับ</p>
+        <div class="contact-cards">
+
+          <a class="contact-card contact-card-v2" href="mailto:NoelSeeker6105@gmail.com" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-card-icon-wrap email-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+            </div>
+            <div class="contact-card-body">
+              <span class="contact-label">Email</span>
+              <strong class="contact-value">NoelSeeker6105@gmail.com</strong>
+            </div>
+            <button class="copy-btn" data-copy="NoelSeeker6105@gmail.com" title="คัดลอก"><i class="ph ph-copy"></i></button>
+            <div class="contact-card-glow"></div>
+          </a>
+
+          <a class="contact-card contact-card-v2" href="tel:0827408309" data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-card-icon-wrap phone-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.08 6.08l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact-card-body">
+              <span class="contact-label">Phone</span>
+              <strong class="contact-value">082-740-8309</strong>
+            </div>
+            <div class="contact-card-glow"></div>
+          </a>
+
+          <div class="contact-card contact-card-v2" data-aos="fade-up" data-aos-delay="300">
+            <div class="contact-card-icon-wrap location-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-card-body">
+              <span class="contact-label">ที่อยู่</span>
+              <strong class="contact-value">ดอนหัน เมืองขอนแก่น 40260</strong>
+            </div>
+            <div class="contact-card-glow"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo"><span class="logo-bracket">&lt;</span>NAT<span class="logo-bracket">/&gt;</span></div>
+      <p>&copy; 2026 นายณัชพล แก้วตีนแท่น &middot; สมัครเข้าศึกษา มทร.อีสาน วิทยาเขตขอนแก่น</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

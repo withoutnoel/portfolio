@@ -1402,3 +1402,21 @@ body.light .contact-label { color: #6b7280; }
   .contact-cards { grid-template-columns: 1fr; max-width: 500px; }
   .about-grid { gap: 2rem; }
 }
+
+.timeline-gpax {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+  background: rgba(124,58,237,0.15);
+  border: 1px solid rgba(124,58,237,0.3);
+  color: var(--purple-light);
+  padding: 0.2rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+body.light .timeline-gpax {
+  background: rgba(124,58,237,0.1);
+  color: var(--purple-dark);
+}
